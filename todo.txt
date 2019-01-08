@@ -3,12 +3,8 @@ CRUD!!!
 create working server API for react front end to use
 
 
-DOGS (MongoDB)
-
-    ./scripts/dogSeed.js   
-        uses mongoose to seed data
-        not working for some dumb reason
-        
+DOGS (MongoDB connected!)
+    finish API
 
 
 CATS (SQL connected!)
