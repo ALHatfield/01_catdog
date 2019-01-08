@@ -1,0 +1,21 @@
+CRUD!!!
+
+create working server API for react front end to use
+
+
+DOGS (MongoDB)
+
+    ./scripts/dogSeed.js   
+        uses mongoose to seed data
+        not working for some dumb reason
+        
+
+
+CATS (SQL connected!)
+    secure the data damnit!
+
+    ./config/connection.js
+        install dotenv
+        replace user/password strings with process.ENV
+   
+
