@@ -1,17 +1,20 @@
-CRUD!!!
-
-create working server API for react front end to use
 
 
-DOGS (MongoDB connected!)
-    finish API
-
-
-CATS (SQL connected!)
-    secure the data damnit!
-
-    ./config/connection.js
-        install dotenv
+dotenv
+    install dotenv and get working
+        ./config/connection.js
         replace user/password strings with process.ENV
    
 
+cat api (sql)
+    read        complete
+    readOne     complete
+    create      complete
+    update      -
+    delete      -
+dog api (mongodb)
+    read        complete
+    readOne     -
+    create      -
+    update      -
+    delete      -
