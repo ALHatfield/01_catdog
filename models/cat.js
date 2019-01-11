@@ -17,7 +17,7 @@ const cat = {
   create: function(cols, vals, cb) {
     orm.create("cats", cols, vals, function(data) {
       cb(data);
-    } )
+    })
   },
   update: function(objColVals, condition, cb) {},
   delete: function(condition, cb) {}

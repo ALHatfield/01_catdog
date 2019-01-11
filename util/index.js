@@ -1,5 +1,5 @@
 module.exports = {
-    printQuestionMarks: function(num) {
+    printQMarks: function(num) {
         var arr = [];
         for (var i = 0; i < num; i++) {
             arr.push("?");
