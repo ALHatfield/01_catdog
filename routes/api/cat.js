@@ -9,7 +9,7 @@ router.route("/")
 // Matches with "/api/cat/:id"
 router.route("/:id")
   .get(catController.findById)
-//   .put(catController.update)
+  .put(catController.update)
 //   .delete(catController.remove);
 
 module.exports = router;

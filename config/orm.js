@@ -23,11 +23,11 @@ const orm = {
     params    = printQMarks(values.length);
     queryStr  = `INSERT INTO ${tableName} (${columns}) VALUES (${params})`
     db.query(queryStr, values, function(err, result) {
-      !err    ? cb(result) : console.error(err);
+      !err    ? cb(result)  : console.error(err);
     });
   },
-  update: function(tableName, objColumnValues, condition, cb) {
-    columns   = objToSql(objColumnValues);
+  update: function(tableName, objCol, condition, cb) {
+    columns   = objToSql(objCol);
     queryStr  = `UPDATE ${tableName} SET ${columns} WHERE ${condition}`
     db.query(queryStr, function(err, result) {
       !err    ? cb(result)  : console.error(err);
@@ -36,7 +36,7 @@ const orm = {
   delete: function(tableName, condition, cb) {
     queryStr  = `DELETE FROM ${tableName} WHERE ${condition}`
     db.query(queryStr, function(err, result) {
-      !err    ? cb(result) : console.error(err);
+      !err    ? cb(result)  : console.error(err);
     });
   }
 };

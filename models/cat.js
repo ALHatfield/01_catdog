@@ -14,14 +14,19 @@ const cat = {
       cb(data);
     })
   },
-  create: function(cols, vals, cb) {
-    orm.create("cats", cols, vals, function(data) {
+  create: function(values, cb) {
+    let columns = ["name", "sleepy"];  // I hate this
+    orm.create("cats", columns, values, function(data) {
       cb(data);
     })
   },
-  update: function(objColVals, condition, cb) {},
+  update: function(condition, cb) {
+    let columns = ["id", "name", "sleepy"]; // I hate this too
+    orm.update("cats", columns, condition, function(data) {
+      cb(data)
+    })
+  },
   delete: function(condition, cb) {}
 };
 
-// Export the database functions for the controller (catsController.js).
 module.exports = cat;

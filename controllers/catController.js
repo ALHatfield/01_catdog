@@ -12,12 +12,16 @@ module.exports = {
     })
   },
   create: function(req, res) {
-    let columns = ["name", "sleepy"]
     let values = [req.body.name, req.body.sleepy]
-    cat.create(columns, values, function(data) {
+    cat.create(values, function(data) {
       res.json(data);
     })
   },
-  update: function(req, res) {},
+  update: function(req, res) {
+    let condition = req.body;
+    cat.update(condition, function() {
+      res.json(data);
+    })
+  },
   remove: function(req, res) {}
 };
