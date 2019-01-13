@@ -18,8 +18,9 @@ module.exports = {
     })
   },
   update: function(req, res) {
-    let condition = req.body;
-    cat.update(condition, function() {
+    let values = req.body;
+    let targetID = req.params.id;
+    cat.update(values, targetID, function(data) {
       res.json(data);
     })
   },

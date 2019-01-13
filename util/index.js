@@ -19,7 +19,7 @@ module.exports = {
                 }
                 // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
                 // e.g. {sleepy: true} => ["sleepy=true"]
-                arr.push(key + "=" + value);
+                arr.push(`${key}="${value}"`);
             }
         }
         // translate array of strings to a single comma-separated string

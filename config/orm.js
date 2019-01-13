@@ -3,6 +3,8 @@ const { printQMarks, objToSql } = require("../util");
 let queryStr;
 let params;
 let columns;
+let condition;
+let values;
 
 // Object Relational Mapping for all our SQL statement functions
 const orm = {
@@ -12,7 +14,8 @@ const orm = {
       !err    ? cb(result)  : console.error(err);
     });
   },
-  findOne: function(tableName, condition, cb) {
+  findOne: function(tableName, targetID, cb) {
+    condition = `ID = ${targetID}`
     queryStr  = `SELECT * FROM ${tableName} WHERE ${condition};`
     db.query(queryStr, function(err, result) {
       !err    ? cb(result)  : console.error(err);
@@ -26,9 +29,10 @@ const orm = {
       !err    ? cb(result)  : console.error(err);
     });
   },
-  update: function(tableName, objCol, condition, cb) {
-    columns   = objToSql(objCol);
-    queryStr  = `UPDATE ${tableName} SET ${columns} WHERE ${condition}`
+  update: function(tableName, objValues, targetID, cb) {
+    values    = objToSql(objValues);
+    condition = `ID = ${targetID}`
+    queryStr  = `UPDATE ${tableName} SET ${values} WHERE ${condition}`
     db.query(queryStr, function(err, result) {
       !err    ? cb(result)  : console.error(err);
     });
