@@ -9,7 +9,7 @@ router.route("/")
 // Matches with "/api/dogs/:id"
 router.route("/:id")
   .get(dogController.findById)
-  // .put(dogController.update)
-  // .delete(dogsController.remove);
+  .put(dogController.update)
+  // .delete(dogController.remove);
 
 module.exports = router;

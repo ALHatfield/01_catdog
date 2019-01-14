@@ -18,6 +18,10 @@ module.exports = {
       .create(req.body)
       .then(data => res.json(data))
   },
-  // update: function(req, res) {},
+  update: function(req, res) {
+    db
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(data => res.json(data))
+  },
   // remove: function(req, res) {}
 };
