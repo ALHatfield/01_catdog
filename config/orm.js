@@ -37,7 +37,8 @@ const orm = {
       !err    ? cb(result)  : console.error(err);
     });
   },
-  delete: function(tableName, condition, cb) {
+  delete: function(tableName, targetID, cb) {
+    condition = `ID = ${targetID}`;
     queryStr  = `DELETE FROM ${tableName} WHERE ${condition}`
     db.query(queryStr, function(err, result) {
       !err    ? cb(result)  : console.error(err);

@@ -22,10 +22,14 @@ const cat = {
   },
   update: function(objValues, targetID, cb) {
     orm.update(tableName, objValues, targetID, function(data) {
-      cb(data)
+      cb(data);
     })
   },
-  delete: function(condition, cb) {}
+  delete: function(targetID, cb) {
+    orm.delete(tableName, targetID, function(data) {
+      cb(data);
+    })
+  }
 };
 
 module.exports = cat;

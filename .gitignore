@@ -64,4 +64,5 @@ typings/
 # TODO notes
 todo.txt
 
+# db schema
 db/

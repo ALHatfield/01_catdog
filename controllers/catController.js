@@ -22,7 +22,12 @@ module.exports = {
     let targetID = req.params.id;
     cat.update(values, targetID, function(data) {
       res.json(data);
-    })
+    })  
   },
-  remove: function(req, res) {}
+  remove: function(req, res) {
+    let targetID = req.params.id;
+    cat.delete(targetID, function(data) {
+      res.json(data);
+    })
+  }
 };
