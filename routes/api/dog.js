@@ -7,9 +7,8 @@ router.route("/")
   // .post(dogController.create);
 
 // Matches with "/api/dogs/:id"
-// router
-//   .route("/:id")
-//   .get(dogController.findById)
+router.route("/:id")
+  .get(dogController.findById)
 //   .put(dogController.update)
 //   .delete(dogsController.remove);
 
