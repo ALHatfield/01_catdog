@@ -10,6 +10,6 @@ router.route("/")
 router.route("/:id")
   .get(dogController.findById)
   .put(dogController.update)
-  // .delete(dogController.remove);
+  .delete(dogController.remove);
 
 module.exports = router;

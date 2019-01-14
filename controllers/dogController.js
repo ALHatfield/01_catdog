@@ -23,5 +23,9 @@ module.exports = {
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(data => res.json(data))
   },
-  // remove: function(req, res) {}
+  remove: function(req, res) {
+    db
+      .findOneAndDelete({ _id: req.params.id})
+      .then(data => res.json(data))
+  }
 };
