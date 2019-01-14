@@ -6,7 +6,6 @@ let columns;
 let condition;
 let values;
 
-// Object Relational Mapping for all our SQL statement functions
 const orm = {
   all: function(tableName, cb) {
     queryStr  = `SELECT * FROM ${tableName};`
