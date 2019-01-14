@@ -13,7 +13,11 @@ module.exports = {
       .findById(req.params.id)
       .then(data => res.json(data))
   },
-  // create: function(req, res) {},
+  create: function(req, res) {
+    db
+      .create(req.body)
+      .then(data => res.json(data))
+  },
   // update: function(req, res) {},
   // remove: function(req, res) {}
 };

@@ -4,12 +4,12 @@ const dogController = require("../../controllers/dogController");
 // Matches with "/api/dogs"
 router.route("/")
   .get(dogController.findAll)
-  // .post(dogController.create);
+  .post(dogController.create);
 
 // Matches with "/api/dogs/:id"
 router.route("/:id")
   .get(dogController.findById)
-//   .put(dogController.update)
-//   .delete(dogsController.remove);
+  // .put(dogController.update)
+  // .delete(dogsController.remove);
 
 module.exports = router;
