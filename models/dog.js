@@ -7,6 +7,6 @@ const dogSchema = new Schema({
   date: { type: Date, default: Date.now }
 });
 
-const Dog = mongoose.model("Dog", dogSchema);
+const Dog = mongoose.model(process.env.MONGODB_COLLECTION, dogSchema);
 
 module.exports = Dog;

@@ -1,8 +1,8 @@
 // cat model calls ../config/orm.js
 
 const orm = require("../config/orm");
-const tableName = "cats";               // todo#5
-const objColumns = ["name", "sleepy"];  // todo #5
+const tableName = process.env.MYSQL_DB_TABLE;
+const objColumns = process.env.MYSQL_COLUMNS;
 
 const cat = {
   all: function(cb) {

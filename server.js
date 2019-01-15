@@ -1,12 +1,16 @@
+const dotenv = require('dotenv').config();
+console.log(dotenv.parsed);
+
+// dependencies
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const routes = require("./routes");
 const { logConnection } = require("./util");
 
 // mongoose middleware
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Animals");
+mongoose.connect(process.env.MONGODB_URI);
 
 // express middleware
 app.use(express.urlencoded({ extended: true }));
