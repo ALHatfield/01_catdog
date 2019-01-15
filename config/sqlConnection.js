@@ -13,11 +13,9 @@ const connection = mysql.createConnection({
 
 // Make connection.
 connection.connect(function(err) {
-  if (err) {
-    console.error(`error connecting MySQL: ${err.stack}`);
-    return;
-  }
-  console.log(`MySQL connected as thread id ${connection.threadId}` + "\n\n\n\n");
+  !err
+    ? console.log(`MySQL connected as thread id ${connection.threadId}` + "\n\n\n\n")
+    : console.error(`error connecting MySQL: ${err.stack}`)
 });
 
 // Export connection for our ORM to use.
