@@ -1,4 +1,3 @@
-// Set up MySQL connection.
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
@@ -11,12 +10,10 @@ const connection = mysql.createConnection({
 
 // console.log(connection);
 
-// Make connection.
 connection.connect(function(err) {
   !err
     ? console.log(`MySQL connected as thread id ${connection.threadId}` + "\n\n\n\n")
     : console.error(`error connecting MySQL: ${err.stack}`)
 });
 
-// Export connection for our ORM to use.
 module.exports = connection;
