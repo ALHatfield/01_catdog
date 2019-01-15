@@ -1,7 +1,5 @@
-const dotenv = require('dotenv').config();
-console.log(dotenv.parsed);
-
 // dependencies
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
