@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-// import List from './Components/List'
+import List from './Components/List'
 
 
 class App extends Component {
@@ -11,10 +11,13 @@ class App extends Component {
         <div>
           {/* <Nav /> */}
           <Switch>
-            {/* <Route exact path="/" component={Books} />
+            <Route exact path="/" component={List} />
+            {/* 
+            <Route exact path="/" component={Books} />
             <Route exact path="/books" component={Books} />
             <Route exact path="/books/:id" component={Detail} />
-            <Route component={NoMatch} /> */}
+            <Route component={NoMatch} /> 
+            */}
           </Switch>
         </div>
       </Router>
