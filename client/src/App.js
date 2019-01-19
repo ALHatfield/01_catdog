@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import List from './Components/List'
+import Nav from './Components/Nav'
 
 
 class App extends Component {
@@ -9,9 +9,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-          {/* <Nav /> */}
+          <Nav />
           <Switch>
-            <Route exact path="/" component={List} />
             {/* 
             <Route exact path="/" component={Books} />
             <Route exact path="/books" component={Books} />
