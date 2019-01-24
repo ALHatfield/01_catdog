@@ -3,15 +3,17 @@ import React, { Component } from 'react'
 export default class Logo extends Component {
 
   state = {
-      href  : "./catsanddogs.jpg",
-      alt   : "catsanddogs"
+      src  : "./catsanddogs.jpg",
+      alt   : "cats+  dogs"
   }
+
+
 
   render() {
     return (
       <div>
         <img 
-          href={this.state.href}
+          src=""
           alt={this.state.alt} 
           />  
       </div>

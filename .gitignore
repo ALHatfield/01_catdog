@@ -62,7 +62,7 @@ typings/
 .next
 
 # TODO notes
-todo.txt
+todo.md
 
 # db schema
 db/
