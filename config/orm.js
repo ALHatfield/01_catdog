@@ -1,14 +1,10 @@
 const db = require("./sqlConnection");
 const { printQMarks, objToSql } = require("../util");
-let queryStr;
-let params;
-let columns;
-let condition;
-let values;
+
 
 const orm = {
   all: function(tableName, cb) {
-    queryStr  = `SELECT * FROM ${tableName};`
+    let queryStr  = `SELECT * FROM ${tableName};`
     db.query(queryStr, function(err, result) {
       !err  
         ? cb(result)  
@@ -16,8 +12,8 @@ const orm = {
     });
   },
   findOne: function(tableName, targetID, cb) {
-    condition = `ID = ${targetID}`
-    queryStr  = `SELECT * FROM ${tableName} WHERE ${condition};`
+    let condition = `ID = ${targetID}`
+    let queryStr  = `SELECT * FROM ${tableName} WHERE ${condition};`
     db.query(queryStr, function(err, result) {
       !err    
         ? cb(result)  
@@ -25,9 +21,9 @@ const orm = {
     })
   },
   create: function(tableName, col, values, cb) {
-    columns   = col.toString();
-    params    = printQMarks(values.length);
-    queryStr  = `INSERT INTO ${tableName} (${columns}) VALUES (${params})`
+    let columns   = col.toString();
+    let params    = printQMarks(values.length);
+    let queryStr  = `INSERT INTO ${tableName} (${columns}) VALUES (${params})`
     db.query(queryStr, values, function(err, result) {
       !err    
         ? cb(result)  
@@ -35,9 +31,9 @@ const orm = {
     });
   },
   update: function(tableName, objValues, targetID, cb) {
-    values    = objToSql(objValues);
-    condition = `ID = ${targetID}`
-    queryStr  = `UPDATE ${tableName} SET ${values} WHERE ${condition}`
+    let values    = objToSql(objValues);
+    let condition = `ID = ${targetID}`
+    let queryStr  = `UPDATE ${tableName} SET ${values} WHERE ${condition}`
     db.query(queryStr, function(err, result) {
       !err    
         ? cb(result)  
@@ -45,8 +41,8 @@ const orm = {
     });
   },
   delete: function(tableName, targetID, cb) {
-    condition = `ID = ${targetID}`;
-    queryStr  = `DELETE FROM ${tableName} WHERE ${condition}`
+    let condition = `ID = ${targetID}`;
+    let queryStr  = `DELETE FROM ${tableName} WHERE ${condition}`
     db.query(queryStr, function(err, result) {
       !err    
         ? cb(result)  
