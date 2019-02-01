@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 export default class Logo extends Component {
   state = {
-      imageFile : "logo.jpg",
-      imageText : "Logo"
+    imageFile : "logo.jpg",
+    imageText : "Logo"
   }
 
   style = { width:"50px" }
