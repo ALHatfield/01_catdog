@@ -11,6 +11,7 @@ const { logConnection } = require("./util");
 mongoose.connect(process.env.MONGODB_URI);
 
 // express middleware
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
