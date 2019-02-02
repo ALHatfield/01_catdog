@@ -4,22 +4,27 @@
 
 import React, { Component } from 'react'
 import ProfileCard from './ProfileCard'
-import faker from 'faker'
+import API from '../../utils/API'
 
 export default class ProfileGallery extends Component {
+  
+  componentDidMount = () => {
+    this.loadAnimals();
+  }
 
-  componentWillMount = () => {
-    // before this component mounts data needs to be retreived from backend
-    // axios.get('/api/...)
+  loadAnimals = () => {
+    API
+      .findMany()
+      .then(res => console.log(res))
   }
 
   render() {
     return (
       <div>
         <ProfileCard 
-          name={faker.name.firstName()}
-          image={faker.image.animals()}
-          description={faker.lorem.sentence()}
+          name=""
+          image=""
+          description=""
         />
       </div>
     )

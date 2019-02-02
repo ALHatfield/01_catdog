@@ -4,8 +4,8 @@ import Logo from './Logo'
 export default class NavBar extends Component {
   render() {
     return (
-    <nav class="ui menu">
-        <div class="header item">
+    <nav className="ui menu">
+        <div className="header item">
             <Logo imageFile={this.props.logoImage} />
         </div>
         <a href="/" className="item">this isn't browser router...</a>

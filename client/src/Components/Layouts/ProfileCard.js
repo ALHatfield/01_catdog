@@ -4,22 +4,22 @@ export default class ProfileCard extends Component {
 
   render() {
     return (
-        <div class="ui card">
-            <div class="image">
+        <div className="ui card">
+            <div className="image">
                 <img src={this.props.image} alt=""/>
             </div>
-            <div class="content">
-                <a href="/" class="header">{this.props.name}</a>
-                <div class="meta">
-                <span class="date">Joined in 2013</span>
+            <div className="content">
+                <a href="/" className="header">{this.props.name}</a>
+                <div className="meta">
+                <span className="date">Joined in 2013</span>
                 </div>
-                <div class="description">
+                <div className="description">
                     {this.props.description}
                 </div>
             </div>
-            <div class="extra content">
+            <div className="extra content">
                 <a href="/">
-                    <i class="user icon"></i>
+                    <i className="user icon"></i>
                     22 Friends
                 </a>
             </div>

@@ -2,8 +2,8 @@
 // https://semantic-ui.com/introduction/getting-started.html
 
 import React, { Component } from 'react';
-import NavBar from './Components/Layouts/NavBar';
-import ProfileGallery from './Components/Layouts/ProfileGallery'
+import NavBar from './components/layouts/NavBar';
+import ProfileGallery from './components/layouts/ProfileGallery'
 
 
 class App extends Component {
