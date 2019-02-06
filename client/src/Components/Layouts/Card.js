@@ -1,3 +1,6 @@
+//TODO: Update button
+//TODO: Delete button
+
 import React, { Component } from 'react'
 
 export default class ProfileCard extends Component {

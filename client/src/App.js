@@ -1,9 +1,9 @@
-//TODO: Create simple layout
+//TODO: Connect React.Router to the navbar
 // https://semantic-ui.com/introduction/getting-started.html
 
 import React, { Component } from 'react';
 import NavBar from './components/layouts/NavBar';
-import ProfileGallery from './components/layouts/ProfileGallery'
+import Gallery from './components/layouts/Gallery'
 
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <NavBar logoImage={'logo.jpg'} />
-        <ProfileGallery />
+        <Gallery />
         
       </div>
     );
