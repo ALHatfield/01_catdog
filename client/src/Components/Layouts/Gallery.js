@@ -7,10 +7,11 @@ import Card from './Card'
 import API from '../../utils/API'
 
 export default class Gallery extends Component {
-  
-  state = {
-    animals: [],
-    comments: []
+  constructor(props) {
+    super(props)
+    this.state = {
+      animals: []
+    }
   }
 
   componentDidMount = () => this.loadAnimals()
