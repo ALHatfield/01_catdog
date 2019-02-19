@@ -29,7 +29,7 @@ export default class Gallery extends Component {
         {
           // Loop and Print Cards
           this.state.animals.map(function(animal) {
-            return <Card key={animal._id} name={animal.name} image="" description="" />
+            return <Card key={animal._id} id={animal._id} name={animal.name} image="" description="" />
           })
         }
       </div>
