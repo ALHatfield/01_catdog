@@ -1,5 +1,4 @@
-//TODO: Update button
-//TODO: Delete button
+//TODO: Like button
 
 import React, { Component } from 'react'
 import API from '../../utils/API'
@@ -14,7 +13,7 @@ export default class ProfileCard extends Component {
 
     render() {  
         return (
-            <div id={this.props.id} className="ui card">
+            <div id={this.props.id} className="four wide column ui card">
                 <div className="image">
                     <img src={this.props.image} alt=""/>
                 </div>
@@ -30,7 +29,7 @@ export default class ProfileCard extends Component {
                 <div className="extra content">
                     <a href="/">
                         <i className="user icon"></i>
-                        22 Friends
+                        <span>{this.props.friendCount}</span> friends
                     </a>
                 </div>
                 <button onClick={() => this.handleDislike()} className="negative ui button">Dislike</button>

@@ -1,7 +1,3 @@
-//TODO: Create new card button
-//TODO: Add search bar
-
-
 import React, { Component } from 'react'
 import Card from './Card'
 import API from '../../utils/API'
