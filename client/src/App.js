@@ -1,21 +1,39 @@
 //TODO: Connect React.Router to the navbar
-// https://semantic-ui.com/introduction/getting-started.html
+
 
 import React, { Component } from 'react'
 import NavBar from './components/layouts/NavBar'
 import Gallery from './components/layouts/Gallery'
 import NewPetForm from './components/layouts/NewPetForm'
+import API from './utils/API'
 
-class App extends Component {
+
+export default class App extends Component {
+
+  state = {
+    animals: []
+  }
+
+  componentWillMount = () => this.loadAnimals()
+
+  loadAnimals = () => {
+    API
+      .findMany()
+      .then(result => this.setState({ animals: result.data }))
+      .catch(error => console.log(error))
+  }
+
   render() {
     return (
       <div>
-        <NavBar logoImage={'logo.jpg'} />
-        <Gallery />
-        <NewPetForm />
+        <div>
+          <NavBar logoImage={'logo.jpg'} />
+        </div>
+        <div>
+          <NewPetForm />
+          <Gallery animals={this.state.animals}/>
+        </div>
       </div>
     );
   }
 }
-
-export default App;

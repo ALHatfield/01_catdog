@@ -25,3 +25,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pet-form {
+  display: block;
+  text-align: center;
+  margin: auto;
+}

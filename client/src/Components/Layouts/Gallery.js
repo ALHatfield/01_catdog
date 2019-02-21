@@ -3,28 +3,12 @@ import Card from './Card'
 import API from '../../utils/API'
 
 export default class Gallery extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      animals: []
-    }
-  }
-
-  componentDidMount = () => this.loadAnimals()
-
-  loadAnimals = () => {
-    API
-      .findMany()
-      .then(result => this.setState({ animals: result.data }))
-      .catch(error => console.log(error))
-  }
-
   render() {
     return (
-      <div className="ui four column grid">
+      <div className="flex-container">
         {
           // Loop and Print Cards
-          this.state.animals.map(function(animal) {
+          this.props.animals.map(function(animal) {
             return <Card key={animal._id} id={animal._id} name={animal.name} image="" description="" />
           })
         }
