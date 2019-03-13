@@ -10,7 +10,8 @@ const { logConnection } = require("./util");
 // mongoose middleware
 mongoose.connect(process.env.MONGODB_URI);
 
-// express middleware
+// express middleware 
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);

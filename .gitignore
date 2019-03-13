@@ -61,8 +61,7 @@ typings/
 # next.js build output
 .next
 
-# TODO notes
-todo.txt
-
+# notes
+notes.txt
 # db schema
 db/

@@ -3,10 +3,7 @@ const db = require("../models/dog");
 
 // This file empties the Books collection and inserts the books below
 
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/Animals"
-);
+mongoose.connect(process.env.MONGODB_URI);
 
 const dogSeed = [
   {

@@ -1,3 +1,16 @@
+/* 
+body 22 pixel font
+large heading 60 pixel
+small heading 32 pixel
+sans-serif font category
+line spacing 150%
+ 45 - 90 characters per line
+resource: Google web fonts 
+*/
+
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +24,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pet-form {
+  display: block;
+  text-align: center;
+  margin: auto;
 }
