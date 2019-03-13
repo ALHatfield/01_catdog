@@ -1,3 +1,6 @@
+//TODO: Connect React.Router to the navbar
+
+
 import React, { Component } from 'react'
 import Logo from './Logo'
 

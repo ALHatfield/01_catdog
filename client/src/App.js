@@ -1,6 +1,3 @@
-//TODO: Connect React.Router to the navbar
-
-
 import React, { Component } from 'react'
 import NavBar from './components/layouts/NavBar'
 import Gallery from './components/layouts/Gallery'
