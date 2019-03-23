@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import NavBar from './components/layouts/NavBar'
-import Gallery from './components/layouts/Gallery'
-import NewPetForm from './components/layouts/NewPetForm'
+import NavBar from './Components/Layouts/NavBar'
+import Gallery from './Components/Layouts/Gallery'
+import NewPetForm from './Components/Layouts/NewPetForm'
 import API from './utils/API'
 
 
