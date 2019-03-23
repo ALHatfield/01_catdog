@@ -6,10 +6,8 @@ import API from '../../utils/API'
 
 export default class ProfileCard extends Component {
 
-    handleDislike = () => {
-        // use API here
-        API.deleteOne(this.props.id)
-    }
+    handleDislike = () => API.deleteOne(this.props.id)
+    
 
 
     render() {  

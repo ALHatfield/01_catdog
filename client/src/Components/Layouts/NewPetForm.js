@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 export default class NewPetForm extends Component {
   render() {
     return (
-      <form class="pet-form">
+      <form className="pet-form">
         <input type="name" placeholder="Your pet's name"/>
         <input type="radio" name="animal" value="dog"/> Dog
         <input type="radio" name="animal" value="cat"/> Cat

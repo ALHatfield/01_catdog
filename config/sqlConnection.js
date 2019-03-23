@@ -1,3 +1,5 @@
+// TODO: add a date joined column and match the dog data so that react can pull the same data.
+
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
