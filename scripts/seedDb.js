@@ -1,3 +1,5 @@
+
+
 const mongoose = require("mongoose");
 const db = require("../models/dog");
 
@@ -9,22 +11,30 @@ const dogSeed = [
   {
     name: "Lassy",
     breed: "golden retriever",
-    date: new Date(Date.now())
+    age: 3,
+    description: null,
+    date: new Date(Date.now()),
   },
   {
     name: "Sammy",
     breed: "yellow labrador",
+    age: 3,
+    description: null,
     date: new Date(Date.now())
   },
   
   {
     name: "Lady",
     breed: "pointer",
+    age: 3,
+    description: null,
     date: new Date(Date.now())
   },
   {
     name: "Whiskey",
     breed: "yellow labrador",
+    age: 3,
+    description: null,
     date: new Date(Date.now())
   }  
 ];
