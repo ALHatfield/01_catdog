@@ -3,8 +3,10 @@ import axios from 'axios'
 
 export default {
     findAll: function() {
+
     },
     deleteOne: function(id) {
+        
     },
     findDog: function() {
         return axios.get(`/api/dog`)
