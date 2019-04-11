@@ -15,7 +15,7 @@ export default class App extends Component {
 
   loadAnimals = () => {
     API
-      .findMany()
+      .findAll()
       .then(result => this.setState({ animals: result.data }))
       .catch(error => console.log(error))
   }

@@ -6,7 +6,7 @@ import API from '../../utils/API'
 
 export default class ProfileCard extends Component {
 
-    handleDislike = () => API.deleteOne(this.props.id)
+    handleDislike = () => API.deleteDog(this.props.id)
     
 
 
